@@ -50,11 +50,11 @@ class ChatRoomState extends State<ChatRoom> {
       text: message.text,
     );
 
-    sendToGemini(message);
+    _sendToGemini(message);
     _addMessage(textMessage);
   }
 
-  void sendToGemini(types.PartialText message) async {
+  void _sendToGemini(types.PartialText message) async {
     final String response = await _apiController.chatStream(message.text);
     final textMessage = types.TextMessage(
       author: _gemini,

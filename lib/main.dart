@@ -33,10 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final TextEditingController _promptController = TextEditingController();
-  final APIController _apiController = APIController();
-  String _response = "";
-
   @override
   Widget build(BuildContext context){
     return const Scaffold(

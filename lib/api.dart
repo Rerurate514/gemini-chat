@@ -14,9 +14,10 @@ class APIController{
 
   Future<String> chatStream(String message) async {
     final model = GenerativeModel(
-        model: 'gemini-pro',
-        apiKey: API_KEY,
-        generationConfig: GenerationConfig(maxOutputTokens: 100));
+      model: 'gemini-pro',
+      apiKey: API_KEY,
+      generationConfig: GenerationConfig(maxOutputTokens: 100)
+    );
 
     final chat = model.startChat(history: _chatList.isEmpty ? null : _chatList);
     var content = Content.text(message);
